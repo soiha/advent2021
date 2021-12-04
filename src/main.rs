@@ -5,13 +5,20 @@ use std::fs;
 
 mod day01;
 mod day02;
+mod day03;
 
 fn main() {
+    let days: Vec<fn(String)->String> = vec![
+        crate::day01::day01,
+        crate::day02::day02,
+        crate::day03::day03
+    ];
+    
     let args: Vec<String> = env::args().collect();
     let file = &args[1];
     let input = fs::read_to_string(file)
         .expect(format!("Could not read input file {}", file).as_str());
-    let result = crate::day02::day02(input);
+    let result = days[2](input);
     
-    print!("Result is: {}", result);
+    print!("{}", result);
 }
