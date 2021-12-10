@@ -12,6 +12,7 @@ mod day06;
 mod day07;
 mod day08;
 mod day09;
+mod day10;
 
 const DEFAULT_INPUT_FILE_DIR: &str = "inputs/";
 
@@ -25,7 +26,8 @@ fn main() {
         crate::day06::day06,
         crate::day07::day07,
         crate::day08::day08,
-        crate::day09::day09
+        crate::day09::day09,
+        crate::day10::day10
     ];
 
     let args: Vec<String> = env::args().collect();
